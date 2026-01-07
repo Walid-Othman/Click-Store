@@ -68,29 +68,29 @@ const EarPhones = useMemo(()=>{return Data.filter((e)=>e.type==='Earphone')},[Da
 {open?<AlertSnak label={message} variant="success" className="left-[15%] !px-5 sm:left-[40%] !mt-3 fixed z-10"  />:''}
 <div className="w-full">
     {LaptopProducts.length>0 &&<div className="flex justify-between items-center">
-        <h1 className="lg:text-2xl border-b-2 border-gray-400 !pb-2 lg:w-1/6 !ml-10  md:w-1/4 !mt-10 text-gray-400 ">Laptop Department</h1>
-        <Link className="!mt-10 !pr-10 text-lg text-blue-500 hover:text-gray-200" to={`/Category/${labtop}`}>Show All</Link>
+        <h1 className="lg:text-2xl border-b-2 border-purple-400  !pb-2 lg:w-1/6 !ml-10  md:w-1/4 !mt-10 text-gray-400 ">Laptop Department</h1>
+        <Link className="!mt-10 !pr-10 text-lg text-purple-400  hover:text-gray-200" to={`/Category/${labtop}`}>Show All</Link>
     </div>}
 <SwiperP>{laps}</SwiperP>
 </div>
 <div className="w-full">
    {phoneproduct.length>0 && <div className="flex justify-between items-center">
-        <h1 className="lg:text-2xl border-b-2 border-gray-400 !pb-2 lg:w-1/12 !ml-10  md:w-1/4 !mt-10 text-gray-400 ">Phones</h1>
-        <Link className="!mt-10 !pr-10 text-lg text-blue-500 hover:text-gray-200" to={`/Category/${phone}`}>Show All</Link>
+        <h1 className="lg:text-2xl border-b-2 border-purple-400  !pb-2 lg:w-1/12 !ml-10  md:w-1/4 !mt-10 text-gray-400 ">Phones</h1>
+        <Link className="!mt-10 !pr-10 text-lg text-purple-400  hover:text-gray-200" to={`/Category/${phone}`}>Show All</Link>
     </div>}
 <SwiperP>{phones}</SwiperP>
 </div>
 <div className="w-full">
    { chargers.length>0 &&<div className="flex justify-between items-center">
-        <h1 className="lg:text-2xl border-b-2 border-gray-400 !pb-2 lg:w-1/6 !ml-10  md:w-1/4 !mt-10 text-gray-400 ">Chargers & Cables</h1>
-        <Link className="!mt-10 !pr-10 text-lg text-blue-500 hover:text-gray-200" to={`/Category/${charg}`}>Show All</Link>
+        <h1 className="lg:text-2xl border-b-2 border-purple-400  !pb-2 lg:w-1/6 !ml-10  md:w-1/4 !mt-10 text-gray-400 ">Chargers & Cables</h1>
+        <Link className="!mt-10 !pr-10 text-lg text-purple-400 hover:text-gray-200" to={`/Category/${charg}`}>Show All</Link>
     </div>}
 <SwiperP>{charger}</SwiperP>
 </div>
 <div className="w-full">
     {EarBodsPhones.length>0 && <div className="flex justify-between items-center">
-        <h1 className="lg:text-2xl border-b-2 border-gray-400 !pb-2 lg:w-1/5 !ml-10  md:w-1/4 !mt-10 text-gray-400 ">Audio & Headphones</h1>
-        <Link className="!mt-10 !pr-10 text-lg text-blue-500 hover:text-gray-200" to={`/Category/${Earphons}`}>Show All</Link>
+        <h1 className="lg:text-2xl border-b-2 border-purple-400 !pb-2 lg:w-1/5 !ml-10  md:w-1/4 !mt-10 text-gray-400 ">Audio & Headphones</h1>
+        <Link className="!mt-10 !pr-10 text-lg text-purple-400 hover:text-gray-200" to={`/Category/${Earphons}`}>Show All</Link>
     </div>}
 <SwiperP>{EarBodsPhones}</SwiperP>
 </div>
