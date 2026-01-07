@@ -5,6 +5,7 @@ value:string;
 onChange?:(e:React.ChangeEvent<HTMLInputElement>) => void;
 label:string
 className?:string
+ref: React.Ref<HTMLInputElement>;
 }
 
 export interface CardType {
