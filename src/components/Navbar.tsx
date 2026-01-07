@@ -64,7 +64,7 @@ function handelLogOut(){
     <Badge className="absolute -top-4" color="error" badgeContent={Cart.length} showZero> </Badge>
   
  </div>:''}
-        {islogin?<button onClick={handelLogOut}  className="hover:bg-red-400 bg-red-500 !p-2 transition-all rounded-lg" >LogOut</button>:<Link  className="hover:text-blue-500 transition-all" to={'/'}>LogIn</Link>}
+        {islogin?<button onClick={handelLogOut}  className="hover:bg-red-600 bg-red-700 !p-2 transition-all rounded-lg cursor-pointer text-white" >LogOut</button>:<Link  className="hover:text-blue-500 cursor-pointer transition-all font-semibold" to={'/'}>LogIn</Link>}
         {/* <Link  className="hover:text-blue-500 transition-all" to={'/Sign Up'}>SuinUp</Link> */}
         {/* cart */}
 

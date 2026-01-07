@@ -1,16 +1,16 @@
 import { TextField } from "@mui/material";
 import { v4 as uuidv4 } from 'uuid';
 import type { InputType } from "../types/type";
-import { forwardRef } from "react"; // 1. استيراد forwardRef
+import { forwardRef, useMemo } from "react"; 
 
-// 2. تغليف المكون بـ forwardRef
 const Input = forwardRef<HTMLInputElement, InputType>(
   ({ type, value, onChange, label, className }, ref) => {
+    const inputId = useMemo(() => uuidv4(), []);
+
     return (
       <TextField
-        // 3. تمرير الـ ref لخاصية inputRef الخاصة بـ MUI
         inputRef={ref} 
-        id={uuidv4()}
+        id={inputId}
         label={label}
         value={value}
         onChange={onChange}
@@ -18,22 +18,29 @@ const Input = forwardRef<HTMLInputElement, InputType>(
         className={className}
         InputLabelProps={{
           sx: {
-            color: "white",
-            "&.Mui-focused": { color: "#2196f3" },
-            "&.MuiFormLabel-filled": { color: "#2196f3" },
+            // "inherit" تعني خذ لون النص المحيط بك (سواء أبيض في الدارك أو أسود في اللايت)
+            color: "inherit", 
+            opacity: 0.7, // جعل الليبل أخف قليلاً لتمييزه
+            "&.Mui-focused": { color: "#2196f3", opacity: 1 },
+            "&.MuiFormLabel-filled": { color: "#2196f3", opacity: 1 },
           },
         }}
         InputProps={{
           sx: {
-            color: "white",
+            // القيمة "currentColor" تضمن أن النص سيأخذ لون الخط المستخدم في الصفحة حالياً
+            color: "inherit", 
             "& .MuiOutlinedInput-notchedOutline": {
-              borderColor: "white",
+              // جعل الإطار يظهر بلون النص ولكن بشفافية ليكون شكله ناعم
+              borderColor: "currentColor",
+              opacity: 0.5,
             },
             "&:hover .MuiOutlinedInput-notchedOutline": {
-              borderColor: "#90caf9",
+              borderColor: "#2196f3",
+              opacity: 1,
             },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
               borderColor: "#2196f3",
+              opacity: 1,
             },
           },
         }}

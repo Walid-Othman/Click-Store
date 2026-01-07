@@ -69,8 +69,8 @@ return(
         <h1>{prod?.title}</h1>
         <p>{prod?.xldes}</p>
         <div className="flex flex-row gap-x-2.5">
-        <Button className=" w-2/3 !-mb-30 !mx-auto sm:w-1/3 !my-10 !text-white" onClick={()=>{AddToCar()}} variant="outlined">Add to cart</Button>
-        {prod.inCart===true &&<Button className=" w-2/3 !-mb-30 !mx-auto sm:w-1/3 !my-10 !text-white border-red-500"  onClick={()=>{RemoveFromCar()}} variant="outlined">Remove</Button>}
+        <Button className=" w-2/3 !-mb-30 !mx-auto sm:w-1/3 !my-10 !dark:text-white" onClick={()=>{AddToCar()}} variant="outlined">Add to cart</Button>
+        {prod.inCart===true &&<Button className=" w-2/3 !-mb-30 !mx-auto sm:w-1/3 !my-10 !dark:text-white border-red-500"  onClick={()=>{RemoveFromCar()}} variant="outlined">Remove</Button>}
         </div>
         </div>
     </div>

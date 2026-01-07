@@ -48,7 +48,7 @@ function Home (){
     <h1 className="text-[50px] text-center">Log in ...</h1>
         <Input ref={inputRef}  className='w-full sm:w-2/3 !mx-auto' value={name} onChange={((e)=>setname(e.target.value))} label="Enter you name"/>
         <p className="text-red-400 text-sm w-full !-mt-4 sm:w-2/3 !mx-auto">{errorMessage}</p>
-        <Button className='w-2/3 sm:w-1/3 !mx-auto !text-white'sx={{borderBlockColor:'white'}} type="submit" variant="outlined">Log In</Button>
+        <Button className='w-2/3 sm:w-1/3 !mx-auto !dark:text-white'sx={{borderBlockColor:'white'}} type="submit" variant="outlined">Log In</Button>
     </form>}
 </div>
     )
